@@ -5,7 +5,7 @@ import Details from "~/components/Details";
 import Summary from "~/components/Summary";
 import { usePuterStore } from "~/lib/putter";
 
-// "b1cb6c7f-4089-4f00-b87a-f96347d7bad6"
+// "965a9fd9-b915-4efc-80b7-934824309ec6"
 export const meta = () => [
   { title: "Resumind | Review" },
   { name: "description", content: "Detailed overveiw of your resume" },
@@ -25,21 +25,6 @@ const resume = () => {
   }, [isLoading]);
 
   async function LoadResume() {
-    // const resume = await kv.get(`resume:${id}`);
-    // if (!resume) return;
-    // const data = JSON.parse(resume);
-    // const resumeBlob = await fs.read(data.resumePath);
-    // if (!resumeBlob) return;
-    // const pdf = new Blob([resumeBlob], { type: "application/pdf" });
-    // const resumeUrl = URL.createObjectURL(pdf);
-    // setResumeUrl(resumeUrl);
-
-    // const imageBlob = await fs.read(data.imagePath);
-    // if (!imageBlob) return;
-    // const imageUrl = URL.createObjectURL(imageBlob);
-    // setImageUrl(imageUrl);
-    // setFeedback(data.feedback);
-    // console.log({ imageUrl, resumeUrl, feedback });
     const resume = await kv.get(`resume:${id}`);
 
     if (!resume) return;
